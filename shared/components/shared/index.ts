@@ -16,3 +16,4 @@ export { GroupVariants } from './group-variants';
 export { CartButton } from './cart-button';
 export { CartDrawer } from './cart-drawer';
 export { CartDdrawerItem } from './cart-drawer-item';
+export { ProductForm } from './product-form';

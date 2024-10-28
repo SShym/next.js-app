@@ -35,7 +35,7 @@ export const ChooseProductForm: React.FC<Props> = ({
 
   return (
     <div className={cn(className, 'flex flex-1')}>
-      <ProductImage imageUrl={imageUrl} size={30} />
+      <ProductImage imageUrl={imageUrl} size={3} />
       <div className='w-[490px] bg-[#FCFCFC] p-7'>
         <Title text={name} size="md" className="font-extrabold mb-1" />
 

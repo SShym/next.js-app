@@ -3,10 +3,10 @@ import { Container } from './container';
 import { Categories } from './categories';
 import { SortPopup } from './sort-popup';
 import { cn } from '@/shared/lib/utils';
-import { Category } from '@prisma/client';
+import { ICategory } from '@/@types/prisma';
 
 interface Props {
-  categories: Category[];
+  categories: ICategory[];
   className?: string;
 }
 
