@@ -27,11 +27,12 @@ export const getCartDetails = (data: CartDTO): ReturnProps => {
     price: calcCartItemTotalPrice(item),
     productSize: item.productItem.size,
     pizzaType: item.productItem.pizzaType,
+    disabled: false,
     ingredients: item.ingredients.map((ingredient) => ({
       name: ingredient.name,
       price: ingredient.price
     }))
-  }))
+  })) as CartStateItem[];
 
   return {
     items,

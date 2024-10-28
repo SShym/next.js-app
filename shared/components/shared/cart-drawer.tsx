@@ -48,6 +48,7 @@ export const CartDrawer: React.FC<React.PropsWithChildren<Props>> = ({ className
         <div className='-mx-6 mt-5 p-1 overflow-auto flex-1'>
           {items?.map((item) => (
             <CartDdrawerItem
+              disabled={item.disabled}
               loading={loading}
               key={item.id} 
               details={getCartItemDetails(
@@ -80,8 +81,8 @@ export const CartDrawer: React.FC<React.PropsWithChildren<Props>> = ({ className
               <Button
                 type="submit"
                 className="w-full h-12 text-base"
-                loading={loading}>
-                Оформить заказ
+                disabled={loading}>
+                  Оформить заказ
                 <ArrowRight className="w-5 ml-2" />
               </Button>
             </Link>

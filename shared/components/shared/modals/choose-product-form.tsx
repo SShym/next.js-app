@@ -33,7 +33,7 @@ export const ChooseProductForm: React.FC<Props> = ({
   };
 
   const totalPrice = calcTotalPizzaPrice(size, items);
-  console.log(encodeURIComponent(name))
+
   return (
     <div className={cn(className, 'flex flex-1')}>
       <ProductImage 
