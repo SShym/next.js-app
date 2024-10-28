@@ -4,12 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'media.dodostatic.net',
-        pathname: '**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn.dodostatic.net',
+        hostname: 'eljzbzkg5d36iyau.public.blob.vercel-storage.com',
         pathname: '**',
       },
     ],

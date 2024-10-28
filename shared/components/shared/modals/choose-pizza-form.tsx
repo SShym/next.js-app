@@ -29,7 +29,7 @@ export const ChoosePizzaForm: React.FC<Props> = ({
   loading,
   onSubmit,
 }) => {
-  const { size, currentItemId, selectedIngredients, availableSizes, availableTypes, type, setSize, setType, addIngredient } = usePizzaOptions(items);
+  const { size, currentItemId, selectedIngredients, availableSizes, availableTypes, isPizza, type, setSize, setType, addIngredient } = usePizzaOptions(items);
   const totalPrice = calcTotalPizzaPrice(size, items, type, ingredients, selectedIngredients);
 
   const textDetails = `${size} см, традиционное тесто ${mapPizzaType[type]} пицца`
@@ -40,7 +40,11 @@ export const ChoosePizzaForm: React.FC<Props> = ({
 
   return (
     <div className={cn(className, 'flex flex-1')}>
-      <ProductImage imageUrl={imageUrl} size={size} />
+      <ProductImage 
+        isPizza={isPizza} 
+        imageUrl={imageUrl} 
+        size={size} 
+      />
       <div className='w-[490px] bg-[#FCFCFC] p-7'>
         <Title text={name} size="md" className="font-extrabold mb-1" />
 

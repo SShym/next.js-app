@@ -26,16 +26,21 @@ export const ChooseProductForm: React.FC<Props> = ({
   loading,
   onSubmit
 }) => {
-  const { size, availableSizes, setSize, currentItemId } = usePizzaOptions(items);
+  const { size, availableSizes, setSize, isPizza, currentItemId } = usePizzaOptions(items);
+
   const handleClickAdd = () => {
     onSubmit(Number(currentItemId));
   };
 
   const totalPrice = calcTotalPizzaPrice(size, items);
-
+  console.log(encodeURIComponent(name))
   return (
     <div className={cn(className, 'flex flex-1')}>
-      <ProductImage imageUrl={imageUrl} size={3} />
+      <ProductImage 
+        isPizza={isPizza} 
+        imageUrl={imageUrl} 
+        size={1} 
+      />
       <div className='w-[490px] bg-[#FCFCFC] p-7'>
         <Title text={name} size="md" className="font-extrabold mb-1" />
 

@@ -9,10 +9,11 @@ import toast from 'react-hot-toast';
 
 interface Props {
   product: IProduct;
+  onSubmit: VoidFunction;
   className?: string;
 }
 
-export const ProductForm: React.FC<Props> = ({ product, className }) => {
+export const ProductForm: React.FC<Props> = ({ product, onSubmit, className }) => {
   const { addCartItem, loading } = useCartStore();
   
   const firstItem = product.items[0];
@@ -27,6 +28,7 @@ export const ProductForm: React.FC<Props> = ({ product, className }) => {
         ingredients,
       });
 
+      onSubmit();
       toast.success(`Товар "${product.name}" добавлен в корзину`);
     } catch (err) {
       toast.error('Не удалось добавить товар в корзину');
