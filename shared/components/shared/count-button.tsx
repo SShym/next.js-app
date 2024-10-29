@@ -1,7 +1,6 @@
 import React from 'react';
 import { cn } from '@/shared/lib/utils';
 import { CountIconButton } from './count-icon-button';
-import { useCartStore } from '@/shared/store/cart';
 
 export interface CountButtonProps {
   value?: number;
