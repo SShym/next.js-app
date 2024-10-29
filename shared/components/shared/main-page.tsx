@@ -3,13 +3,12 @@ import { Suspense } from 'react';
 import { Title, Container, TopBar, Filters, ProductsGroupList } from '@/shared/components/shared';
 import { ICategory } from '@/@types/prisma';
 
-
 interface Props {
   categories: ICategory[];
   className?: string;
 }
 
-export const MainPage: React.FC<Props> = ({ categories, className }) => {
+export const MainPage: React.FC<Props> = ({ categories, className }) => {  
   return (
     <div className={className}>
       <Container className='mt-10'>

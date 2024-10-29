@@ -18,7 +18,7 @@ interface Props {
 export const ProductCard: React.FC<Props> = ({ id, name, price, imageUrl, className, ingredients }) => {
   return (
     <div className={className}>
-      <Link href={`/product/${id}`}>
+      <Link scroll={false} href={`/product/${id}`}>
         <div className="flex justify-center p-6 bg-secondary rounded-lg h-[260px]">
           <img 
             className='transition-transform duration-300 ease-in-out transform hover:scale-105'
