@@ -7,7 +7,7 @@ export interface CountButtonProps {
   value?: number;
   size?: 'sm' | 'lg';
   className?: string;
-  loading: boolean;
+  disabled?: boolean;
   onClick?: (type: 'plus' | 'minus') => void;
 }
 
@@ -16,13 +16,13 @@ export const CountButton: React.FC<CountButtonProps> = ({
   onClick,
   value = 1,
   size = 'sm',
-  loading
+  disabled
 }) => {
   return (    
     <div className={cn('inline-flex items-center justify-between gap-3', className)}>
       <CountIconButton
         onClick={() => onClick?.('minus')}
-        disabled={value === 1 || loading}
+        disabled={value === 1 || disabled}
         size={size}
         type="minus"
       />
@@ -31,7 +31,7 @@ export const CountButton: React.FC<CountButtonProps> = ({
 
       <CountIconButton 
         onClick={() => onClick?.('plus')} 
-        disabled={loading}
+        disabled={disabled}
         size={size} 
         type="plus" 
       />

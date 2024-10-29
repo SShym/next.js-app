@@ -37,7 +37,7 @@ export const CartDdrawerItem: React.FC<Props> = ({
         
         <hr className='my-3' />
         <div className='flex items-center justify-between'>
-          <CountButton loading={loading} onClick={onClickCountButton} value={quantity} />
+          <CountButton disabled={disabled} onClick={onClickCountButton} value={quantity} />
           <div className='flex items-center gap-3'>
             <CartItem.Price value={price} />
               {!disabled 

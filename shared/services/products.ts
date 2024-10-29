@@ -7,3 +7,9 @@ export const search = async (query: string): Promise<Product[]> => {
 
   return data;
 }
+
+export const findProduct = async (id: number) => {
+  const { data } = await axiosInstance.get('product/id', { params: { id } });
+
+  return data;
+}
