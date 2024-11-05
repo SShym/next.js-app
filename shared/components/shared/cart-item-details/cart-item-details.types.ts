@@ -1,6 +1,3 @@
-import { ingredients } from "@/prisma/constants";
-import { Ingredient } from "@prisma/client";
-
 export interface CartItemProps {
   details: string;
   id: number;

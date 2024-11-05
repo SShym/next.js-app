@@ -17,3 +17,8 @@ export { CartButton } from './cart-button';
 export { CartDrawer } from './cart-drawer';
 export { CartDdrawerItem } from './cart-drawer-item';
 export { ProductForm } from './product-form';
+export { WhiteBlock } from './white-block';
+export { CheckoutPersonalForm } from './checkout/checkout-personal-form';
+export { CheckoutCart } from './checkout/checkout-cart';
+export { CheckoutSideBar } from './checkout/checkout-side-bar';
+export { CheckoutItemDetails } from './checkout/checkout-item-details';
