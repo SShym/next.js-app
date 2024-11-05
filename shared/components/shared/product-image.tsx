@@ -14,10 +14,11 @@ export const ProductImage: React.FC<Props> = ({ className, imageUrl, isPizza, si
   return (
     <div className={cn('flex items-center justify-center flex-1 relative w-full', className)}>
       <Image
+        quality={100}
         width={50}
         height={50}
         src={imageUrl}
-        alt="Logo"
+        alt="pizza"
         className={cn('relative left-2 top-2 transition-all z-10 duration-300', {
           'w-[300px] h-[300px]': size === 1,
           'w-[400px] h-[400px]': size === 2,
